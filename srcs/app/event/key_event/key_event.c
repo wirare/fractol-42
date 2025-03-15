@@ -6,12 +6,12 @@
 /*   By: ellanglo <ellanglo@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 22:43:01 by ellanglo          #+#    #+#             */
-/*   Updated: 2025/02/11 15:39:38 by ellanglo         ###   ########.fr       */
+/*   Updated: 2025/03/15 10:29:13 by ellanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "mlx.h"
 #include "app_handler.h"
 #include "fractol.h"
+#include <mlx.h>
 #include <SDL2/SDL_scancode.h>
 
 void	backspace(t_app *app)
@@ -21,7 +21,7 @@ void	backspace(t_app *app)
 	app->env.mode = 2;
 	app->env.c_offset_mode = 0;
 	app->env.zoom_level = 1;
-	app->env.zoom_offset = z_init(0, 0);
+	app->env.zoom_offset = (t_complex){.re = 0, .im = 0};
 }
 
 void	zoom(int key, t_app *app)

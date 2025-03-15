@@ -6,7 +6,7 @@
 /*   By: ellanglo <ellanglo@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 17:20:18 by ellanglo          #+#    #+#             */
-/*   Updated: 2025/02/11 16:23:56 by ellanglo         ###   ########.fr       */
+/*   Updated: 2025/03/13 17:14:52 by ellanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "fractol.h"
@@ -15,16 +15,13 @@
 #include "newton.h"
 
 __attribute__((const))
-t_color	get_color(int nb)
+inline t_color	get_color(int nb)
 {
 	if (nb == 0)
 		return (0xFFD9A5B3);
 	if (nb == 1)
 		return (0xFF1868AE);
-	if (nb == 2)
-		return (0xFFC6D7EB);
-	else
-		return (0);
+	return (0xFFC6D7EB);
 }
 
 void	draw_pixel(t_app *app, t_complex z, t_complex pos)

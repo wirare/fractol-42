@@ -1,0 +1,370 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  ms/call  ms/call  name    
+ 21.95      0.18     0.18 61672150     0.00     0.00  z_mult
+ 18.29      0.33     0.15 24668860     0.00     0.00  evaluate_polynome
+ 15.85      0.46     0.13 49444887     0.00     0.00  compute_distance
+ 15.85      0.59     0.13 16481629     0.00     0.00  closest_root
+ 10.98      0.68     0.09 74006580     0.00     0.00  z_add
+  4.88      0.72     0.04 12334430     0.00     0.00  z_divide
+  3.66      0.75     0.03 12334430     0.00     0.00  newton_step
+  3.66      0.78     0.03  2073600     0.00     0.00  draw_pixel
+  2.44      0.80     0.02  2073600     0.00     0.00  newton_full
+  2.44      0.82     0.02                             _init
+  0.00      0.82     0.00  2073600     0.00     0.00  get_color
+  0.00      0.82     0.00     1920     0.00     0.00  normalize_x
+  0.00      0.82     0.00     1080     0.00     0.00  normalize_y
+  0.00      0.82     0.00       14     0.00     0.00  n_quality
+  0.00      0.82     0.00       14     0.00     0.00  n_zoom
+  0.00      0.82     0.00        4     0.00     0.00  ft_isdigit
+  0.00      0.82     0.00        4     0.00     0.00  ft_strchr
+  0.00      0.82     0.00        4     0.00     0.00  isspace
+  0.00      0.82     0.00        4     0.00     0.00  ref_atof
+  0.00      0.82     0.00        4     0.00     0.00  ref_atoi
+  0.00      0.82     0.00        2     0.00     0.00  ft_memcmp
+  0.00      0.82     0.00        2     0.00     0.00  ft_memset
+  0.00      0.82     0.00        2     0.00     0.00  ft_strlen
+  0.00      0.82     0.00        1     0.00     0.00  app_destroy
+  0.00      0.82     0.00        1     0.00     0.00  app_init
+  0.00      0.82     0.00        1     0.00     0.00  calc_delta
+  0.00      0.82     0.00        1     0.00     0.00  calc_p
+  0.00      0.82     0.00        1     0.00     0.00  calc_q
+  0.00      0.82     0.00        1     0.00     0.00  calc_u
+  0.00      0.82     0.00        1     0.00     0.00  calc_v
+  0.00      0.82     0.00        1     0.00   800.00  call_newton
+  0.00      0.82     0.00        1     0.00     0.00  delta_m_0
+  0.00      0.82     0.00        1     0.00     0.00  derivative_calc
+  0.00      0.82     0.00        1     0.00     0.00  event_handler
+  0.00      0.82     0.00        1     0.00     0.00  find_cubic_root
+  0.00      0.82     0.00        1     0.00     0.00  free_poly
+  0.00      0.82     0.00        1     0.00     0.00  ft_strncmp
+  0.00      0.82     0.00        1     0.00     0.00  init_newton
+  0.00      0.82     0.00        1     0.00     0.00  init_poly_n
+  0.00      0.82     0.00        1     0.00     0.00  init_poly_n_info
+  0.00      0.82     0.00        1     0.00     0.00  newton_parsing
+  0.00      0.82     0.00        1     0.00     0.00  parse_input
+  0.00      0.82     0.00        1     0.00     0.00  set_poly
+  0.00      0.82     0.00        1     0.00     0.00  shift
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 4 byte(s) for 1.22% of 0.82 seconds
+
+index % time    self  children    called     name
+                0.03    0.77 2073600/2073600     call_newton [2]
+[1]     97.6    0.03    0.77 2073600         draw_pixel [1]
+                0.02    0.75 2073600/2073600     newton_full [4]
+-----------------------------------------------
+                0.00    0.80       1/1           __update_n [3]
+[2]     97.6    0.00    0.80       1         call_newton [2]
+                0.03    0.77 2073600/2073600     draw_pixel [1]
+                0.00    0.00    1920/1920        normalize_x [14]
+                0.00    0.00    1080/1080        normalize_y [15]
+-----------------------------------------------
+                                                 <spontaneous>
+[3]     97.6    0.00    0.80                 __update_n [3]
+                0.00    0.80       1/1           call_newton [2]
+                0.00    0.00       2/2           ft_memcmp [23]
+-----------------------------------------------
+                0.02    0.75 2073600/2073600     draw_pixel [1]
+[4]     93.9    0.02    0.75 2073600         newton_full [4]
+                0.03    0.46 12334430/12334430     newton_step [5]
+                0.13    0.13 16481629/16481629     closest_root [7]
+                0.00    0.00 2073600/2073600     get_color [13]
+-----------------------------------------------
+                0.03    0.46 12334430/12334430     newton_full [4]
+[5]     59.8    0.03    0.46 12334430         newton_step [5]
+                0.15    0.26 24668860/24668860     evaluate_polynome [6]
+                0.04    0.00 12334430/12334430     z_divide [11]
+                0.01    0.00 12334430/74006580     z_add [10]
+-----------------------------------------------
+                0.15    0.26 24668860/24668860     newton_step [5]
+[6]     49.4    0.15    0.26 24668860         evaluate_polynome [6]
+                0.18    0.00 61672150/61672150     z_mult [8]
+                0.07    0.00 61672150/74006580     z_add [10]
+-----------------------------------------------
+                0.13    0.13 16481629/16481629     newton_full [4]
+[7]     31.7    0.13    0.13 16481629         closest_root [7]
+                0.13    0.00 49444887/49444887     compute_distance [9]
+-----------------------------------------------
+                0.18    0.00 61672150/61672150     evaluate_polynome [6]
+[8]     22.0    0.18    0.00 61672150         z_mult [8]
+-----------------------------------------------
+                0.13    0.00 49444887/49444887     closest_root [7]
+[9]     15.9    0.13    0.00 49444887         compute_distance [9]
+-----------------------------------------------
+                0.01    0.00 12334430/74006580     newton_step [5]
+                0.07    0.00 61672150/74006580     evaluate_polynome [6]
+[10]    11.0    0.09    0.00 74006580         z_add [10]
+-----------------------------------------------
+                0.04    0.00 12334430/12334430     newton_step [5]
+[11]     4.9    0.04    0.00 12334430         z_divide [11]
+-----------------------------------------------
+                                                 <spontaneous>
+[12]     2.4    0.02    0.00                 _init [12]
+-----------------------------------------------
+                0.00    0.00 2073600/2073600     newton_full [4]
+[13]     0.0    0.00    0.00 2073600         get_color [13]
+-----------------------------------------------
+                0.00    0.00    1920/1920        call_newton [2]
+[14]     0.0    0.00    0.00    1920         normalize_x [14]
+-----------------------------------------------
+                0.00    0.00    1080/1080        call_newton [2]
+[15]     0.0    0.00    0.00    1080         normalize_y [15]
+-----------------------------------------------
+                0.00    0.00      14/14          n_key_hook [72]
+[16]     0.0    0.00    0.00      14         n_quality [16]
+-----------------------------------------------
+                0.00    0.00      14/14          n_key_hook [72]
+[17]     0.0    0.00    0.00      14         n_zoom [17]
+-----------------------------------------------
+                0.00    0.00       4/4           ref_atoi [22]
+[18]     0.0    0.00    0.00       4         ft_isdigit [18]
+-----------------------------------------------
+                0.00    0.00       4/4           ref_atof [21]
+[19]     0.0    0.00    0.00       4         ft_strchr [19]
+-----------------------------------------------
+                0.00    0.00       4/4           ref_atoi [22]
+[20]     0.0    0.00    0.00       4         isspace [20]
+-----------------------------------------------
+                0.00    0.00       4/4           newton_parsing [42]
+[21]     0.0    0.00    0.00       4         ref_atof [21]
+                0.00    0.00       4/4           ref_atoi [22]
+                0.00    0.00       4/4           ft_strchr [19]
+-----------------------------------------------
+                0.00    0.00       4/4           ref_atof [21]
+[22]     0.0    0.00    0.00       4         ref_atoi [22]
+                0.00    0.00       4/4           isspace [20]
+                0.00    0.00       4/4           ft_isdigit [18]
+-----------------------------------------------
+                0.00    0.00       2/2           __update_n [3]
+[23]     0.0    0.00    0.00       2         ft_memcmp [23]
+-----------------------------------------------
+                0.00    0.00       2/2           parse_input [43]
+[24]     0.0    0.00    0.00       2         ft_memset [24]
+-----------------------------------------------
+                0.00    0.00       2/2           parse_input [43]
+[25]     0.0    0.00    0.00       2         ft_strlen [25]
+-----------------------------------------------
+                0.00    0.00       1/1           main [66]
+[26]     0.0    0.00    0.00       1         app_destroy [26]
+                0.00    0.00       1/1           free_poly [37]
+-----------------------------------------------
+                0.00    0.00       1/1           parse_input [43]
+[27]     0.0    0.00    0.00       1         app_init [27]
+-----------------------------------------------
+                0.00    0.00       1/1           find_cubic_root [36]
+[28]     0.0    0.00    0.00       1         calc_delta [28]
+-----------------------------------------------
+                0.00    0.00       1/1           find_cubic_root [36]
+[29]     0.0    0.00    0.00       1         calc_p [29]
+-----------------------------------------------
+                0.00    0.00       1/1           find_cubic_root [36]
+[30]     0.0    0.00    0.00       1         calc_q [30]
+-----------------------------------------------
+                0.00    0.00       1/1           delta_m_0 [33]
+[31]     0.0    0.00    0.00       1         calc_u [31]
+-----------------------------------------------
+                0.00    0.00       1/1           delta_m_0 [33]
+[32]     0.0    0.00    0.00       1         calc_v [32]
+-----------------------------------------------
+                0.00    0.00       1/1           find_cubic_root [36]
+[33]     0.0    0.00    0.00       1         delta_m_0 [33]
+                0.00    0.00       1/1           calc_u [31]
+                0.00    0.00       1/1           calc_v [32]
+-----------------------------------------------
+                0.00    0.00       1/1           init_poly_n_info [41]
+[34]     0.0    0.00    0.00       1         derivative_calc [34]
+-----------------------------------------------
+                0.00    0.00       1/1           main [66]
+[35]     0.0    0.00    0.00       1         event_handler [35]
+-----------------------------------------------
+                0.00    0.00       1/1           init_poly_n_info [41]
+[36]     0.0    0.00    0.00       1         find_cubic_root [36]
+                0.00    0.00       1/1           calc_p [29]
+                0.00    0.00       1/1           calc_q [30]
+                0.00    0.00       1/1           calc_delta [28]
+                0.00    0.00       1/1           delta_m_0 [33]
+                0.00    0.00       1/1           shift [45]
+-----------------------------------------------
+                0.00    0.00       1/1           app_destroy [26]
+[37]     0.0    0.00    0.00       1         free_poly [37]
+-----------------------------------------------
+                0.00    0.00       1/1           parse_input [43]
+[38]     0.0    0.00    0.00       1         ft_strncmp [38]
+-----------------------------------------------
+                0.00    0.00       1/1           newton_parsing [42]
+[39]     0.0    0.00    0.00       1         init_newton [39]
+-----------------------------------------------
+                0.00    0.00       1/1           set_poly [44]
+[40]     0.0    0.00    0.00       1         init_poly_n [40]
+-----------------------------------------------
+                0.00    0.00       1/1           set_poly [44]
+[41]     0.0    0.00    0.00       1         init_poly_n_info [41]
+                0.00    0.00       1/1           find_cubic_root [36]
+                0.00    0.00       1/1           derivative_calc [34]
+-----------------------------------------------
+                0.00    0.00       1/1           parse_input [43]
+[42]     0.0    0.00    0.00       1         newton_parsing [42]
+                0.00    0.00       4/4           ref_atof [21]
+                0.00    0.00       1/1           init_newton [39]
+                0.00    0.00       1/1           set_poly [44]
+-----------------------------------------------
+                0.00    0.00       1/1           main [66]
+[43]     0.0    0.00    0.00       1         parse_input [43]
+                0.00    0.00       2/2           ft_memset [24]
+                0.00    0.00       2/2           ft_strlen [25]
+                0.00    0.00       1/1           ft_strncmp [38]
+                0.00    0.00       1/1           newton_parsing [42]
+                0.00    0.00       1/1           app_init [27]
+-----------------------------------------------
+                0.00    0.00       1/1           newton_parsing [42]
+[44]     0.0    0.00    0.00       1         set_poly [44]
+                0.00    0.00       1/1           init_poly_n [40]
+                0.00    0.00       1/1           init_poly_n_info [41]
+-----------------------------------------------
+                0.00    0.00       1/1           find_cubic_root [36]
+[45]     0.0    0.00    0.00       1         shift [45]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012-2022 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+  [12] _init                  [35] event_handler          [17] n_zoom
+  [26] app_destroy            [36] find_cubic_root         [4] newton_full
+  [27] app_init               [37] free_poly              [42] newton_parsing
+  [28] calc_delta             [18] ft_isdigit              [5] newton_step
+  [29] calc_p                 [23] ft_memcmp              [14] normalize_x
+  [30] calc_q                 [24] ft_memset              [15] normalize_y
+  [31] calc_u                 [19] ft_strchr              [43] parse_input
+  [32] calc_v                 [25] ft_strlen              [21] ref_atof
+   [2] call_newton            [38] ft_strncmp             [22] ref_atoi
+   [7] closest_root           [13] get_color              [44] set_poly
+   [9] compute_distance       [39] init_newton            [45] shift
+  [33] delta_m_0              [40] init_poly_n            [10] z_add
+  [34] derivative_calc        [41] init_poly_n_info       [11] z_divide
+   [1] draw_pixel             [20] isspace                 [8] z_mult
+   [6] evaluate_polynome      [16] n_quality

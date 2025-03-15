@@ -1,0 +1,572 @@
+[
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/app/app_handler.c",
+   "-o",
+   ".objs/app/app_handler.o"
+  ],
+  "file": "srcs/app/app_handler.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/app/event/event.c",
+   "-o",
+   ".objs/app/event/event.o"
+  ],
+  "file": "srcs/app/event/event.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/app/event/key_event/key_event.c",
+   "-o",
+   ".objs/app/event/key_event/key_event.o"
+  ],
+  "file": "srcs/app/event/key_event/key_event.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/app/event/key_event/newton_key_event.c",
+   "-o",
+   ".objs/app/event/key_event/newton_key_event.o"
+  ],
+  "file": "srcs/app/event/key_event/newton_key_event.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/complexes/complex_number.c",
+   "-o",
+   ".objs/complexes/complex_number.o"
+  ],
+  "file": "srcs/complexes/complex_number.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/complexes/complex_init.c",
+   "-o",
+   ".objs/complexes/complex_init.o"
+  ],
+  "file": "srcs/complexes/complex_init.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/main/main.c",
+   "-o",
+   ".objs/main/main.o"
+  ],
+  "file": "srcs/main/main.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/main/input_parsing.c",
+   "-o",
+   ".objs/main/input_parsing.o"
+  ],
+  "file": "srcs/main/input_parsing.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/main/error.c",
+   "-o",
+   ".objs/main/error.o"
+  ],
+  "file": "srcs/main/error.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/main/init_func.c",
+   "-o",
+   ".objs/main/init_func.o"
+  ],
+  "file": "srcs/main/init_func.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/fractal/julia.c",
+   "-o",
+   ".objs/fractal/julia.o"
+  ],
+  "file": "srcs/fractal/julia.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/fractal/draw_fractal.c",
+   "-o",
+   ".objs/fractal/draw_fractal.o"
+  ],
+  "file": "srcs/fractal/draw_fractal.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/fractal/pointer_functions.c",
+   "-o",
+   ".objs/fractal/pointer_functions.o"
+  ],
+  "file": "srcs/fractal/pointer_functions.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/polynomes/create_polynome.c",
+   "-o",
+   ".objs/polynomes/create_polynome.o"
+  ],
+  "file": "srcs/polynomes/create_polynome.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/polynomes/derivative_calc.c",
+   "-o",
+   ".objs/polynomes/derivative_calc.o"
+  ],
+  "file": "srcs/polynomes/derivative_calc.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/polynomes/compute_cubic_root/cubic_root_calc.c",
+   "-o",
+   ".objs/polynomes/compute_cubic_root/cubic_root_calc.o"
+  ],
+  "file": "srcs/polynomes/compute_cubic_root/cubic_root_calc.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/polynomes/compute_cubic_root/simple_calc.c",
+   "-o",
+   ".objs/polynomes/compute_cubic_root/simple_calc.o"
+  ],
+  "file": "srcs/polynomes/compute_cubic_root/simple_calc.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/newton/newton_fractal.c",
+   "-o",
+   ".objs/newton/newton_fractal.o"
+  ],
+  "file": "srcs/newton/newton_fractal.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/newton/distance_eval.c",
+   "-o",
+   ".objs/newton/distance_eval.o"
+  ],
+  "file": "srcs/newton/distance_eval.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/newton/draw_functions.c",
+   "-o",
+   ".objs/newton/draw_functions.o"
+  ],
+  "file": "srcs/newton/draw_functions.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/normalize.c",
+   "-o",
+   ".objs/normalize.o"
+  ],
+  "file": "srcs/normalize.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/utils/ft_memcmp.c",
+   "-o",
+   ".objs/utils/ft_memcmp.o"
+  ],
+  "file": "srcs/utils/ft_memcmp.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/utils/ft_strlen.c",
+   "-o",
+   ".objs/utils/ft_strlen.o"
+  ],
+  "file": "srcs/utils/ft_strlen.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/utils/ft_memset.c",
+   "-o",
+   ".objs/utils/ft_memset.o"
+  ],
+  "file": "srcs/utils/ft_memset.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/utils/ft_strncmp.c",
+   "-o",
+   ".objs/utils/ft_strncmp.o"
+  ],
+  "file": "srcs/utils/ft_strncmp.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/utils/ft_atof.c",
+   "-o",
+   ".objs/utils/ft_atof.o"
+  ],
+  "file": "srcs/utils/ft_atof.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/utils/ft_isdigit.c",
+   "-o",
+   ".objs/utils/ft_isdigit.o"
+  ],
+  "file": "srcs/utils/ft_isdigit.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/utils/power.c",
+   "-o",
+   ".objs/utils/power.o"
+  ],
+  "file": "srcs/utils/power.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/utils/ft_atoi.c",
+   "-o",
+   ".objs/utils/ft_atoi.o"
+  ],
+  "file": "srcs/utils/ft_atoi.c"
+ },
+ {
+  "directory": "/nfs/homes/ellanglo/Project/fractol_git",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-pg",
+   "-I",
+   "headers",
+   "-I",
+   "lib/MacroLibX/includes",
+   "-c",
+   "srcs/utils/ft_strchr.c",
+   "-o",
+   ".objs/utils/ft_strchr.o"
+  ],
+  "file": "srcs/utils/ft_strchr.c"
+ }
+]

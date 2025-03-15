@@ -6,20 +6,19 @@
 /*   By: ellanglo <ellanglo@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 17:22:18 by ellanglo          #+#    #+#             */
-/*   Updated: 2024/12/14 23:16:45 by ellanglo         ###   ########.fr       */
+/*   Updated: 2025/03/13 17:03:06 by ellanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "newton.h"
 
-__attribute__((const))
-static double	compute_distance(t_complex z, t_complex root)
+inline static void	compute_distance(t_complex z, t_complex root, double *result)
 {
 	double	re_distance;
 	double	im_distance;
 
 	re_distance = root.re - z.re;
 	im_distance = root.im - z.im;
-	return (re_distance * re_distance + im_distance * im_distance);
+	*result = re_distance * re_distance + im_distance * im_distance;
 }
 
 double	closest_root(t_complex *root, t_complex z, int degree, int mode)
@@ -29,11 +28,11 @@ double	closest_root(t_complex *root, t_complex z, int degree, int mode)
 	uint8_t	smallest_distance_index;
 
 	smallest_distance = 1e10;
-	smallest_distance_index = 5;
+	smallest_distance_index = 3;
 	degree--;
 	while (degree >= 0)
 	{
-		current_distance = compute_distance(z, root[degree]);
+		compute_distance(z, root[degree], &current_distance);
 		if (current_distance < smallest_distance)
 		{
 			smallest_distance = current_distance;

@@ -6,7 +6,7 @@
 /*   By: ellanglo <ellanglo@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 22:59:39 by ellanglo          #+#    #+#             */
-/*   Updated: 2025/02/26 17:26:45 by ellanglo         ###   ########.fr       */
+/*   Updated: 2025/03/13 16:18:24 by ellanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <math.h>
@@ -67,9 +67,10 @@ t_color	julia(t_complex z, t_complex c, t_fractal fractal)
 	i = 0;
 	if (!fractal.mouse_flag && fractal.mode == 2 && first_check(c))
 		return (0);
-	while (mod2(z) < 8 && i != fractal.iteration)
+	while ((z.re * z.re + z.im * z.im) < 8 && i != fractal.iteration)
 	{
-		z = z_add(z_power(z, fractal.mode), c);
+		z_power(&z, fractal.mode);
+		z_add(&z, c);
 		i++;
 	}
 	if (i < fractal.iteration)

@@ -6,7 +6,7 @@
 /*   By: ellanglo <ellanglo@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/28 23:12:00 by ellanglo          #+#    #+#             */
-/*   Updated: 2024/12/14 23:16:20 by ellanglo         ###   ########.fr       */
+/*   Updated: 2025/03/15 10:29:34 by ellanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "mlx.h"
@@ -18,7 +18,7 @@ static void	n_backspace(t_app *app)
 	app->n_env.iteration = 128;
 	app->n_env.p_f = 1;
 	app->n_env.zoom_level = 1;
-	app->n_env.zoom_offset = z_init(0, 0);
+	app->n_env.zoom_offset = (t_complex){.re = 0, .im = 0};
 }
 
 static void	n_zoom(int key, t_app *app)

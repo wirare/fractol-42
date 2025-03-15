@@ -6,7 +6,7 @@
 /*   By: ellanglo <ellanglo@42angouleme.fr>         +#+  +:+       +#+       */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 01:23:31 by ellanglo          #+#    #+#             */
-/*   Updated: 2025/02/26 17:26:53 by ellanglo         ###   ########.fr       */
+/*   Updated: 2025/03/15 10:31:52 by ellanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "complex_number.h"
@@ -36,28 +36,28 @@ static void	set_color_offset(t_app *app)
 
 void	draw_call(t_app *app)
 {
-	int			pos_x;
-	int			pos_y;
-	double		re;
-	double		im;
-	t_fractal	fractal;
+	t_complex		complexe;
+	t_complex		pos;
+	t_fractal		fractal;
+	static double	ys[1920] = {0};
 
 	fractal = app->env;
-	pos_x = 0;
+	pos.re = 0;
 	set_color_offset(app);
-	while (pos_x < LENGTH)
+	while (pos.re < LENGTH)
 	{
-		pos_y = 0;
-		re = normalize_x(pos_x, fractal.zoom_level);
-		re += fractal.zoom_offset.re;
-		while (pos_y < HEIGHT)
+		pos.im = 0;
+		complexe.re = normalize_x(pos.re, fractal.zoom_level);
+		complexe.re += fractal.zoom_offset.re;
+		while (pos.im < HEIGHT)
 		{
-			im = normalize_y(pos_y, fractal.zoom_level);
-			im += fractal.zoom_offset.im;
-			fractal.__draw_fuction(app, z_init(re, im), z_init(pos_x, pos_y));
-			pos_y++;
+			if (pos.re == 0)
+				ys[(int)pos.im] = normalize_y(pos.im, fractal.zoom_level);
+			complexe.im = ys[(int)pos.im] + fractal.zoom_offset.im;
+			fractal.__draw_fuction(app, complexe, pos);
+			pos.im++;
 		}
-		pos_x++;
+		pos.re++;
 	}
 }
 
@@ -74,7 +74,7 @@ void	follow_mouse(t_app *app)
 
 void	draw_fractal(t_app *app, t_complex z, t_complex c, t_complex pos)
 {
-	static t_color	pixel[LENGTH + HEIGHT];
+	static t_color	pixel[LENGTH * HEIGHT] = {0};
 	t_color			color;
 	t_fractal		fractal;
 

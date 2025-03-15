@@ -6,7 +6,7 @@
 /*   By: ellanglo <ellanglo@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 17:16:12 by ellanglo          #+#    #+#             */
-/*   Updated: 2024/12/14 23:16:31 by ellanglo         ###   ########.fr       */
+/*   Updated: 2025/03/11 18:04:15 by ellanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "fractol.h"
@@ -14,7 +14,7 @@
 
 void	__draw_mandelbrot(t_app *app, t_complex z1, t_complex pos)
 {
-	draw_fractal(app, z_init(0, 0), z1, pos);
+	draw_fractal(app, (t_complex){.re = 0, .im = 0}, z1, pos);
 }
 
 void	__draw_julia(t_app *app, t_complex z1, t_complex pos)

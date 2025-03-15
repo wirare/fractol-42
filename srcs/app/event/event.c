@@ -6,13 +6,13 @@
 /*   By: ellanglo <ellanglo@42angouleme.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 15:41:37 by ellanglo          #+#    #+#             */
-/*   Updated: 2025/01/28 20:05:01 by ellanglo         ###   ########.fr       */
+/*   Updated: 2025/03/15 10:30:28 by ellanglo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "mlx.h"
 #include "app_handler.h"
 #include "normalize.h"
 #include "fractol.h"
+#include <mlx.h>
 #include <SDL2/SDL_scancode.h>
 
 int	window_hook(int event, void *mlx)
@@ -42,13 +42,13 @@ int	wheel_hook(int action, void *_app)
 	npos.re = normalize_x(pos.re, app->env.zoom_level);
 	npos.im = normalize_y(pos.im, app->env.zoom_level);
 	if (action == 1)
-		app->env.zoom_level /= 1.2;
+		app->env.zoom_level /=1.2;
 	if (action == 2 && app->env.zoom_level != 1)
 	{
 		app->env.zoom_level *= 1.2;
 		if (app->env.zoom_level > .9)
 		{
-			app->env.zoom_offset = z_init(0, 0);
+			app->env.zoom_offset = (t_complex){.re = 0, .im = 0};
 			app->env.zoom_level = 1;
 			return (0);
 		}
@@ -100,7 +100,7 @@ int	n_wheel_hook(int action, void *_app)
 		app->n_env.zoom_level *= 1.2;
 		if (app->n_env.zoom_level > 10)
 		{
-			app->n_env.zoom_offset = z_init(0, 0);
+			app->n_env.zoom_offset = (t_complex){.re = 0, .im = 0};
 			app->n_env.zoom_level = 10;
 			return (0);
 		}
