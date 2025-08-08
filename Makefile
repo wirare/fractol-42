@@ -12,8 +12,9 @@ MLX             := $(DIR_MLX)/libmlx.so
 
 OBJS            := $(addprefix $(DIR_OBJS)/, $(FRAC_SOURCES:%.c=%.o))
 
-CC              := cc
-CFLAGS          := -Wall -Wextra -Werror -g
+CC              := clang
+OPT				:= -O3 -mavx2 -mfma -march=native -mtune=native -funroll-loops -fvectorize -ffp-contract=fast  -freciprocal-math -ffast-math -fstrict-aliasing  -fomit-frame-pointer -flto=full -mprefer-vector-width=256
+CFLAGS          := -Wall -Wextra -Werror $(OPT)
 IFLAGS          := -I $(DIR_HEADERS) -I $(MLX_INCLUDES)
 
 GREEN            = \033[0;32m
@@ -25,7 +26,7 @@ DIR_DUP          = mkdir -p $(@D)
 all: $(NAME)
 
 $(NAME): $(MLX) $(OBJS)
-	@$(CC) $(CFLAGS) $(IFLAGS) -lm -lSDL2 $(OBJS) -o $(NAME) $(MLX) 
+	@$(CC) $(CFLAGS) $(IFLAGS) $(OBJS) $(MLX) -lm -lSDL2 -o $(NAME)
 	@printf "$(GREEN)$(NAME) compiled$(END)\n"
 
 $(MLX):
